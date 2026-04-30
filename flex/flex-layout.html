@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;    // 중앙으로 (align-items: center;)
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 1500px;
+      
+    }
+    header {
+      border-bottom: 1px solid gray;
+    }
+    footer {
+      border-top: 1px solid gray;
+    }
+    nav {
+      border-right: 1px solid gray;
+    }
+    aside {
+      border-left: 1px solid gray;
+    }
+    nav, aside {
+      /* 너비 고정 */
+      flex-basis: 150px;
+      /* 다른 놈 희생 */
+      flex-shrink: 0;
+
+    }
+
+    .content {
+      display: flex;
+    }
+
+    main {
+      text-align: justify;     /*양쪽맞춤*/
+      padding: 10px;
+      column-count: 4;
+      column-width: 200px;
+      column-gap: 20px;          /*간격*/
+      column-rule-color: red;
+      column-rule-style: solid;
+      column-rule-width: 1px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Holy Grail Layout</h1>
+    </header>
+    <section class="content">
+      <nav>
+        <ul>
+          <li>main</li>
+          <li>about</li>
+          <li>help</li>
+        </ul>
+      </nav>
+      <main>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam corrupti magni recusandae earum, dolores illum possimus obcaecati optio ipsam voluptas odio. Veritatis, vel. Rerum deserunt soluta corrupti, culpa laboriosam consequatur.
+          Temporibus, fugit. Laborum neque nobis sint aliquid harum rerum repellat? Quasi quos aliquam soluta velit corporis totam voluptates ad. Eum esse eius recusandae quasi totam debitis similique. Quibusdam, repudiandae earum?
+          Quis deserunt laboriosam recusandae delectus commodi quaerat, beatae aut quae adipisci incidunt maxime corrupti omnis, magnam cumque molestias. Pariatur, sit nam. Corrupti distinctio quam rerum ad dolorem? Dicta, cupiditate possimus.
+          Possimus facere perspiciatis veritatis enim iste laboriosam voluptatibus, voluptas aperiam sunt quos totam tempore nobis inventore animi maxime, nemo blanditiis accusantium officia voluptatem incidunt iusto! Sapiente laborum architecto explicabo aliquid.
+          Iste, fugit laborum fuga odio expedita alias omnis aut temporibus. Vero consectetur aperiam voluptatum enim aliquid alias, a praesentium, recusandae nesciunt rerum illum sapiente nobis qui expedita neque nemo tempore.
+          Vel, nostrum laboriosam hic at facilis quo minus itaque aliquid illum rerum nesciunt consequuntur debitis placeat dolores sunt aut explicabo. Consectetur, placeat porro distinctio sint accusantium delectus necessitatibus vero iure.
+          Culpa, ea unde illo, nostrum possimus debitis voluptas cupiditate nisi veniam nihil deserunt ex. Eligendi eum deleniti exercitationem quas fugiat, quae reprehenderit a minima et amet tempora eos. Hic, sequi!
+          Culpa corporis, consectetur autem distinctio nostrum quas ipsum iure soluta dicta fugit quis voluptatum repellendus doloribus magni illo voluptas fuga qui dolorum officia, dolor amet ex labore fugiat impedit! Nobis.
+          Vero, voluptates est quae temporibus officia officiis asperiores magni consectetur, tempora rerum eos. Assumenda aliquid tenetur qui accusamus sapiente officiis sequi architecto, aliquam repellendus reprehenderit reiciendis hic recusandae vero necessitatibus?
+          Soluta voluptatibus quaerat quia beatae totam! Quod, minus, nam, consequuntur eaque a numquam odio ad est voluptatibus tempora aliquid. Explicabo asperiores autem cum incidunt quos quam ab ullam earum voluptas.
+        </p>
+      </main>
+      <aside>
+        AD (광고)
+      </aside>
+    </section>
+    <footer>
+      <a href="www.naver.com">홈페이지</a>
+    </footer>
+  </div>
+</body>
+</html>
