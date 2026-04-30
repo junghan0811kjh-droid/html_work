@@ -101,3 +101,69 @@ div, input, textarea {
   padding: 10px;
   float: left;
 }
+.nav-container {
+  display: flex;
+  height: 50px;
+  padding: 10px;
+  justify-content: center;
+  background: black;
+  color: white;
+}
+
+.nav-item {
+  margin-right: 10px;
+
+}
+
+.product-container {
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-container div {
+  /* float: left; */
+  width: 20%;
+  text-align: center;
+}
+
+/* 미디어쿼리 : 위치는 보통 css의 맨 마지막에 위치시킴 */
+/* 현재 브라우저 폭이 1200 px 기준으로 이하가 될 경우 */
+@media screen and (max-width: 1200px){
+  .maintitle {
+    font-size: 30px;
+  }
+  .product-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .product-container > div {
+     flex: 1 1 50%;    /* 2개씩 1줄 */
+  }
+  
+}
+/* 현재 브라우저 폭이 768 px 기준으로 이하가 될 경우 */
+@media screen and (max-width: 768px){
+  .maintitle {
+    font-size: 20px;
+  }
+    .product-container > div {
+      /* flex: 1 1 100%; */
+      /* 첫번째 : flex-basis(기본크기) */
+      /* 두번째 : shrink (줄어들기) */
+      /* 세번째 : flex-grow (늘어나기) */
+     flex: 1 1 100%;    /* 1개씩 1줄 */
+     margin: 0;
+  }
+}
+/* 현재 브라우저 폭이 576 px 기준으로 이하가 될 경우 */
+@media screen and (max-width: 576px){
+  .maintitle {
+    font-size: 10px;
+  }
+}
